@@ -1,17 +1,16 @@
 <div class="flex-row posts">
     <article class="card" style="width: 60rem">
-        {{each}}
+        {{#each posts}}
         <div class="">
             <h3>
                 {{title}}
             </h3>
-            <p>{{body}}</p>
+
         </div>
 
         <div class="card-text">
-
+            <p>{{body}}</p>
         </div>
         {{/each}}
     </article>
 </div>
-
