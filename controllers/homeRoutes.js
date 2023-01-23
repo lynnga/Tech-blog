@@ -13,6 +13,7 @@ router.get("/", async (req, res) => {
     });
 });
 
+// router.get(/)
 
 router.get("/login", (req, res) => {
   if (req.session.logedIn) {

@@ -1,9 +1,9 @@
-const signupHandle = async function (e) {
+const loginHandle = async function (e) {
     e.preventDefault();
 
-    const usernameElement = document.querySelector("#signup-name");
-    const passwordElement = document.querySelector("#signup-password");
-    console.log("here");
+    const usernameElement = document.querySelector("#username-login");
+    const passwordElement = document.querySelector("#password-login");
+    console.log("login sent");
     fetch("/api/user", {
         method: "post",
         body: JSON.stringify({
@@ -22,4 +22,4 @@ const signupHandle = async function (e) {
 
 
 
-document.querySelector("#signup-form").addEventListener("submit", signupHandle);
+document.querySelector("#login-submit-bt").addEventListener("submit", loginHandle);
