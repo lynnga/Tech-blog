@@ -1,16 +1,20 @@
 <div class="flex-row posts">
     <article class="card" style="width: 60rem">
         {{#each posts}}
-        <div class="">
+        <div class="post">
             <h3>
-                {{title}}
+                <a class="post-title" href="/post/{{id}}">{{title}}</a>
             </h3>
-
-        </div>
-
-        <div class="card-text">
-            <p>{{body}}</p>
+            <div class="post-user">
+                Posted By {{User.username}}
+            </div>
+            <div class="card-text">
+                <p>{{body}}</p>
+            </div>
         </div>
         {{/each}}
-    </article>
+</div>
+
+
+</article>
 </div>

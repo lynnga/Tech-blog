@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(215, 197, 197);
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+nav {
+    justify-content: center;
+    text-align: center;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0px 10px;
+}
+
+.post {
+    border: 1px double black;
+    border-radius: 5px;
+    margin: 10px 10%;
+    padding: 0px 40px;
+}
+
+footer {
+    bottom: 0px;
+    position: absolute;
+    padding: 10px 0px;
+    background-color: blueviolet;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-wrap {
+    position: relative;
+}
+footer p {
+    color: white;
+}
+
+hr {
+    margin: 10px 10%;
+}
+
+.comments h5,
+#add-cmt-h3 {
+    color: rgb(28, 69, 151);
+    text-align: center;
+}
+
+hr.cmt-separator {
+    margin: 0px 30%;
+    padding: 0px 0px;
+}
+
+#comment-form textarea {
+    border: 0px solid;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(253, 236, 255);
+}
+
+#cmt-submit-bt {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px 5px;
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+
+#cmt-submit-bt:hover {
+    border: 1px solid rgb(25, 86, 126);
+    background-color: rgb(25, 86, 126);
+    transition: 0.3s ease;
+}

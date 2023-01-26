@@ -4,7 +4,7 @@ const loginHandle = async function (e) {
     const usernameElement = document.querySelector("#username-login");
     const passwordElement = document.querySelector("#password-login");
     console.log("login sent");
-    fetch("/api/user", {
+    fetch("/api/user/login", {
         method: "post",
         body: JSON.stringify({
             username: usernameElement.value,
@@ -12,8 +12,20 @@ const loginHandle = async function (e) {
         }),
         headers: { "Content-Type" : "application/json" },
     })
-        .then(function () {
-            document.location.replace("/");
+        .then(function (d) {
+            console.log(d);
+            if (d.url == "http://localhost:3001/")
+            {
+                document.location.replace('/');
+            }
+            else if (d.redirected)
+            {
+                document.location.reload('/login');
+            }
+            else
+            {
+                document.location.reload('/');
+            }
         })
 }
 
@@ -22,4 +34,4 @@ const loginHandle = async function (e) {
 
 
 
-document.querySelector("#login-submit-bt").addEventListener("submit", loginHandle);
+document.querySelector("#login-form").addEventListener("submit", loginHandle);

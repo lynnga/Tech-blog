@@ -4,14 +4,17 @@ const auth = require("../../auth");
 
 router.post("/", auth, async (req, res) => {
   const user_id = req.session.userId;
-
-  Post.create({...req.body, userId: req.session.userId})
+  Post.create({...req.body, User_id: req.session.userId})
     .then(post => {
       res.json(post);
     })
     .catch(e => {
-      rse.status(500).json(e);
+      res.status(500).json(e);
     })
+});
+
+router.get("/create", auth, (req, res) => {
+  res.render('new-post');
 });
 
 router.put(":/id", auth, (req, res) => {

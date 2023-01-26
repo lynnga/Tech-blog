@@ -1,0 +1,38 @@
+<div class="post">
+    <div>
+        <h4> {{post.title}} </h4>
+    </div>
+    <div class="post-body-section">
+        <p> {{post.body}}</p>
+    </div>
+    <hr>
+    <div>
+        <p> {{post.User.username}}</p>
+    </div>
+
+    {{#if post.Comments}}
+    <div class="comments">
+        <h5> Comments </h5>
+        {{#each post.Comments}}
+        <div>
+            <p>
+                {{body}}
+            </p>
+        </div>
+        <hr class="cmt-separator">
+        {{/each}}
+    </div>
+    {{/if}}
+    <h5 id="add-cmt-h3"> Add new comment </h5>
+    <form id="comment-form" class="comment-form">
+        <div>
+            <input type="hidden" id="post-id" name="post-id" value="{{post.id}}" />
+            <textarea name="comment-body" id="comment-body"></textarea>
+            <br>
+            <br>
+            <button id="cmt-submit-bt" type="submit" class="submit-bt">SUBMIT</button>
+        </div>
+    </form>
+</div>
+
+<script src="/js/comments.js"></script>

@@ -1,17 +1,45 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG</title>
-  </head>
-  <body>
-    <main class="">
-      {{{body}}}
-    </main>
-  </body>
 
-  <footer>
-    Get in tech now!
-  </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLOG</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/api/user/logout"> LOG OUT </a>
+        </li>
+        <li>
+          <a href="/login"> LOG IN </a>
+        </li>
+        <li>
+          <a href="/signup"> SIGN UP </a>
+        </li>
+        <li>
+          <a href="/"> HOME </a>
+        </li>
+        <li>
+          <a href="/api/post/create"> NEW POST </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="">
+    {{{body}}}
+  </main>
+  <div class="footer-wrap">
+    <footer>
+      Get in tech now!
+      <p>@Design by me</p>
+    </footer>
+  </div>
+</body>
+
 </html>

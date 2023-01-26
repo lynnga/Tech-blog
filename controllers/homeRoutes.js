@@ -31,5 +31,29 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.get("/post/:id", (req, res) => {
+  Post.findByPk(req.params.id, {
+    include: [
+      User,
+      {
+        model: Comment,
+        include: [User],
+      }
+    ]
+  }).then (data => {
+    if (data)
+    {
+      const post = data.get({plain: true});
+      console.log(post);
+      res.render('single-post', {post});
+    }
+    else
+    {
+      res.status(400).end();
+    }
+  }).catch(e => {
+    res.status(500).json(e).end();
+  });
+})
 
 module.exports = router;
